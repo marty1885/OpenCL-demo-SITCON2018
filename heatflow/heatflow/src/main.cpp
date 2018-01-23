@@ -78,7 +78,7 @@ void initCL(int width, int height, float* buffer)
 
 	context = cl::Context({device});
 	cl::Program::Sources sources;
-	std::ifstream in("kernels.cl");
+	std::ifstream in("../kernels.cl");
 	std::string kernelCode((std::istreambuf_iterator<char>(in)),
 		std::istreambuf_iterator<char>());
 	sources.push_back({kernelCode.c_str(),kernelCode.length()});
