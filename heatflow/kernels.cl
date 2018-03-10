@@ -38,7 +38,7 @@ float calc(float sum[3], float center[3], int x)
 __kernel void heatstep(__global float* restrict in, __global float* restrict out
 	, int width, int height)
 {
-	float K = 0.5f;
+	float K = 0.95f;
 	int y = get_global_id(0);
 	if( y == 0 || y == height-1)
 		return;
